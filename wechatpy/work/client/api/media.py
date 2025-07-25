@@ -52,7 +52,11 @@ class WeChatMedia(BaseWeChatAPI):
 
         :return: 返回的 JSON 数据包
         """
-        return self._post("media/upload_attachment", params={"media_type": media_type, "attachment_type": attachment_type}, files={"media": media_file})
+        return self._post(
+            "media/upload_attachment",
+            params={"media_type": media_type, "attachment_type": attachment_type},
+            files={"media": media_file}
+        )
 
     def get_url(self, media_id):
         """
